@@ -10,15 +10,17 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#11
 .hero h1{margin:0;font-size:28px;color:#111}
 .hero p{color:var(--muted);margin:8px 0 20px}
 .hero{background:#000;color:#fff;padding:28px;border-radius:12px;margin-bottom:18px}
-.hero-inner{display:flex;align-items:center;gap:18px}
+.hero-inner{display:flex;align-items:center;gap:18px;justify-content:space-between}
+.hero-left{display:flex;align-items:center;gap:12px}
 .site-logo{width:64px;height:auto}
 .hero-text h1{font-size:34px;letter-spacing:1px;margin:0;color:var(--accent)}
 .hero-text p{margin:6px 0 0;color:#e9dff0}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;justify-content:center;align-items:center}
+.actions{display:flex;gap:12px;flex-wrap:nowrap;margin-bottom:0;align-items:center}
 .actions button{color:#fff}
 .actions .copy{background:var(--accent);color:#fff}
 .actions .secondary{background:transparent;color:#f3dff0;border:1px solid rgba(255,255,255,0.06)}
-.hero .actions{background:transparent;padding-top:12px;padding-bottom:6px;border-radius:0;margin-top:12px}
+
+.hero .actions{background:transparent;padding-top:0;padding-bottom:0;border-radius:0;margin-top:0}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .card{background:linear-gradient(180deg,#ffffff 0%,#fffafc 100%);border-radius:14px;padding:16px;box-shadow:0 10px 30px rgba(17,6,14,0.08)}
 .card-header{display:flex;align-items:center;justify-content:space-between;width:100%;background:transparent;border:0;padding:0;cursor:pointer}
@@ -53,7 +55,7 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#11
 /* Responsive adjustments */
 @media (max-width:800px){
   .container{padding:14px}
-  .hero-inner{flex-direction:column;align-items:flex-start;gap:10px}
+  .hero-inner{flex-direction:row;align-items:center;gap:10px}
   .site-logo{width:56px}
   .hero-text h1{font-size:26px}
   .cards{grid-template-columns:1fr}
@@ -69,8 +71,8 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#11
   .value{flex-basis:100%;order:2}
   .copy{order:3;width:100%;margin-top:8px}
   .share-row .whatsapp{width:100%}
-  .actions{flex-direction:column;align-items:stretch}
-  .actions button{width:100%}
+  .actions{flex-direction:row;align-items:center;overflow-x:auto}
+  .actions button{white-space:nowrap}
 }
 
 /* prevent horizontal scrollbar */
