@@ -121,8 +121,15 @@ document.addEventListener('DOMContentLoaded',()=>{
       document.querySelectorAll('.person-tabs .tab').forEach(t=>t.classList.remove('active'));
       tab.classList.add('active');
       document.querySelectorAll('.card.person-card').forEach(card=>{
-        if(card.id === target) card.style.display = '';
-        else card.style.display = 'none';
+        if(card.id === target) {
+          card.style.display = '';
+          // ensure details are visible when switching back
+          setCardState(card, true);
+        } else {
+          card.style.display = 'none';
+          // collapse hidden cards to keep state predictable
+          setCardState(card, false);
+        }
       });
     });
   });
