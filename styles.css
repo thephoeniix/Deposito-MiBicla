@@ -80,10 +80,11 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#11
   .hero-text h1{font-size:22px}
   .row{flex-wrap:wrap}
   .label{min-width:0;width:100%;color:#666;font-size:13px;margin-bottom:6px}
-  .value{flex-basis:100%;order:2}
-  .copy{order:3;width:100%;margin-top:8px}
+  /* keep value and copy icon on the same row to save space */
+  .value{flex:1;order:2;min-width:0}
+  .row .copy{order:3;margin-left:8px;width:40px;height:40px;padding:8px}
   .share-row .whatsapp{width:100%}
-  .actions{flex-direction:row;align-items:center;overflow-x:auto}
+  .actions{flex-direction:row;align-items:center}
   .actions button{white-space:nowrap}
 }
 
