@@ -63,4 +63,22 @@ document.addEventListener('DOMContentLoaded',()=>{
       }
     });
   }
+
+  // Toggle: abrir / cerrar tarjetas cuando se hace click en la cabecera
+  document.querySelectorAll('.card-header').forEach(h=>{
+    h.addEventListener('click', ()=>{
+      const card = h.closest('.card');
+      const open = card.classList.toggle('open');
+      h.setAttribute('aria-expanded', open ? 'true' : 'false');
+      // for accessible animation: recompute max-height based on scrollHeight
+      const body = card.querySelector('.card-body');
+      if(body){
+        if(open){
+          body.style.maxHeight = body.scrollHeight + 24 + 'px';
+        }else{
+          body.style.maxHeight = '0px';
+        }
+      }
+    });
+  });
 })
