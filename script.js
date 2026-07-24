@@ -18,13 +18,11 @@ document.addEventListener('DOMContentLoaded',()=>{
       if(!val) return;
       try{
         await copyText(val.trim());
-        const orig = btn.textContent;
-        btn.textContent = '¡Copiado!';
         btn.classList.add('copied');
-        setTimeout(()=>{ btn.textContent = orig; btn.classList.remove('copied'); },1500);
+        setTimeout(()=>{ btn.classList.remove('copied'); },1500);
       }catch(err){
-        btn.textContent = 'Error';
-        setTimeout(()=>{ btn.textContent = 'Copiar'; },1500);
+        btn.classList.add('error');
+        setTimeout(()=>{ btn.classList.remove('error'); },1500);
       }
     })
   })

@@ -9,12 +9,15 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#11
 .container{max-width:960px;margin:28px auto;padding:20px}
 .hero h1{margin:0;font-size:28px;color:#111}
 .hero p{color:var(--muted);margin:8px 0 20px}
-.hero{background:linear-gradient(90deg,#140012 0%,#26001a 60%);color:#fff;padding:28px;border-radius:12px;margin-bottom:18px}
+.hero{background:#000;color:#fff;padding:28px;border-radius:12px;margin-bottom:18px}
 .hero-inner{display:flex;align-items:center;gap:18px}
 .site-logo{width:64px;height:auto}
 .hero-text h1{font-size:34px;letter-spacing:1px;margin:0;color:var(--accent)}
-.hero-text p{margin:6px 0 0;color:#f3dff0}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.hero-text p{margin:6px 0 0;color:#e9dff0}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;justify-content:center;align-items:center;background:#000;padding:18px;border-radius:12px}
+.actions button{color:#fff}
+.actions .copy{background:var(--accent);color:#fff}
+.actions .secondary{background:transparent;color:#f3dff0;border:1px solid rgba(255,255,255,0.06)}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .card{background:linear-gradient(180deg,#ffffff 0%,#fffafc 100%);border-radius:14px;padding:16px;box-shadow:0 10px 30px rgba(17,6,14,0.08)}
 .card-header{display:flex;align-items:center;justify-content:space-between;width:100%;background:transparent;border:0;padding:0;cursor:pointer}
@@ -37,6 +40,14 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#11
 .whatsapp{background:#25D366;color:#fff;border:0;padding:8px 12px;border-radius:20px;cursor:pointer;font-weight:700}
 .share-row{margin-top:10px}
 .actions .secondary{background:rgba(255,255,255,0.06)}
+
+/* icon-only copy buttons */
+.row .copy{display:inline-flex;align-items:center;justify-content:center;padding:8px;width:40px;height:40px;border-radius:10px;background:transparent;color:var(--accent);border:1px solid rgba(0,0,0,0.06)}
+.row .copy .icon{display:block}
+.row .copy.copied{background:var(--accent);color:#fff;border-color:var(--accent)}
+.row .copy.copied::after{content:'¡Copiado!';position:absolute;top:-32px;right:0;background:#111;color:#fff;padding:6px 8px;border-radius:6px;font-size:13px;white-space:nowrap}
+.row .copy.error{background:#ffecec;color:#d32f2f;border-color:#f5c6cb}
+.row .copy[aria-label]{position:relative}
 
 /* Responsive adjustments */
 @media (max-width:800px){
