@@ -12,10 +12,11 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#11
 .hero{background:#000;color:#fff;padding:28px;border-radius:12px;margin-bottom:18px}
 .hero-inner{display:flex;align-items:center;gap:18px;justify-content:space-between}
 .hero-left{display:flex;align-items:center;gap:12px}
+.hero-content{display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
 .site-logo{width:64px;height:auto}
 .hero-text h1{font-size:34px;letter-spacing:1px;margin:0;color:var(--accent)}
 .hero-text p{margin:6px 0 12px;color:#e9dff0}
-.hero-left .actions{margin-top:8px}
+.hero-content .actions{margin-top:8px}
 .actions{display:flex;gap:12px;flex-wrap:nowrap;margin-bottom:0;align-items:center}
 .actions button{color:#fff}
 .actions .copy{background:var(--accent);color:#fff}
@@ -35,7 +36,8 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#11
 
 /* person tabs */
 .person-tabs{display:flex;gap:8px;margin:18px 0 12px}
-.person-tabs .tab{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:10px 14px;border-radius:10px;cursor:pointer}
+.person-tabs{display:flex;gap:8px;margin:18px 0 12px;flex-wrap:wrap}
+.person-tabs .tab{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:10px 14px;border-radius:10px;cursor:pointer;white-space:normal}
 .person-tabs .tab.active{border-color:var(--accent);background:linear-gradient(90deg,rgba(255,47,139,0.06),rgba(255,47,139,0.02));font-weight:700}
 
 /* make whatsapp action green */
@@ -57,7 +59,7 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#11
 .card.open .card-body{max-height:400px;padding-top:8px}
 .person-card{background:linear-gradient(135deg,#fff 0%,#fff7fb 100%);border-left:4px solid var(--accent)}
 .person-header{font-size:18px;font-weight:800;color:#111;margin-bottom:4px}
-.person-subtitle{font-size:13px;color:var(--muted);font-weight:600;margin-bottom:10px}
+.person-subtitle{font-size:13px;color:var(--muted);font-weight:600;margin-bottom:10px;white-space:normal;word-break:break-word}
 .label{min-width:72px;font-weight:700;color:#333}
 .row{display:flex;align-items:center;gap:12px;margin-bottom:10px}
 .row:last-child{margin-bottom:0}
