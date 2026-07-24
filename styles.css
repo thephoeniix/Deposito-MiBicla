@@ -20,6 +20,18 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#11
 .actions .copy{background:var(--accent);color:#fff}
 .actions .secondary{background:transparent;color:#f3dff0;border:1px solid rgba(255,255,255,0.06)}
 
+/* Action buttons: icon + label */
+.action-btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:20px}
+.action-btn svg{display:block}
+.action-btn .btn-label{font-weight:600}
+
+/* On small screens show only icons to avoid wrapping */
+@media (max-width:520px){
+  .action-btn{padding:8px 10px}
+  .action-btn .btn-label{display:none}
+  .actions{gap:8px}
+}
+
 .hero .actions{background:transparent;padding-top:0;padding-bottom:0;border-radius:0;margin-top:0}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .card{background:linear-gradient(180deg,#ffffff 0%,#fffafc 100%);border-radius:14px;padding:16px;box-shadow:0 10px 30px rgba(17,6,14,0.08)}

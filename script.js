@@ -49,18 +49,21 @@ document.addEventListener('DOMContentLoaded',()=>{
       if(!text) return;
       try{
         await copyText(text);
-        const orig = copyAllBtn.textContent;
-        copyAllBtn.textContent = '¡Copiado!';
+        const orig = copyAllBtn.dataset.label || 'Copiar todo';
+        const labelSpan = copyAllBtn.querySelector('.btn-label');
+        if(labelSpan) labelSpan.textContent = '¡Copiado!';
         copyAllBtn.classList.add('copied');
         if(navigator.share){
           setTimeout(()=>{
             navigator.share?.({ title: 'Datos de depósito', text }).catch(()=>{});
           },600);
         }
-        setTimeout(()=>{ copyAllBtn.textContent = orig; copyAllBtn.classList.remove('copied'); },1800);
+        setTimeout(()=>{ if(labelSpan) labelSpan.textContent = orig; copyAllBtn.classList.remove('copied'); },1800);
       }catch(e){
-        copyAllBtn.textContent = 'Error';
-        setTimeout(()=>{ copyAllBtn.textContent = 'Copiar todo'; },1500);
+        const labelSpan = copyAllBtn.querySelector('.btn-label');
+        if(labelSpan) labelSpan.textContent = 'Error';
+        copyAllBtn.classList.add('error');
+        setTimeout(()=>{ if(labelSpan) labelSpan.textContent = (copyAllBtn.dataset.label || 'Copiar todo'); copyAllBtn.classList.remove('error'); },1500);
       }
     });
   }
@@ -120,7 +123,12 @@ document.addEventListener('DOMContentLoaded',()=>{
   const toggleAllBtn = document.getElementById('toggleAll');
   function setAllCards(open) {
     document.querySelectorAll('.card').forEach(card => setCardState(card, open));
-    if(toggleAllBtn) toggleAllBtn.textContent = open ? 'Ocultar todo' : 'Mostrar todas';
+    if(toggleAllBtn){
+      toggleAllBtn.setAttribute('aria-pressed', open ? 'true' : 'false');
+      const lbl = toggleAllBtn.querySelector('.btn-label');
+      if(lbl) lbl.textContent = open ? 'Ocultar todo' : 'Mostrar todas';
+      toggleAllBtn.dataset.label = open ? 'Ocultar todo' : 'Mostrar todas';
+    }
   }
 
   document.querySelectorAll('.card-header').forEach(h=>{
@@ -134,8 +142,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   if(toggleAllBtn) {
     toggleAllBtn.addEventListener('click', ()=>{
-      const open = toggleAllBtn.textContent !== 'Mostrar todas';
-      setAllCards(!open);
+      const current = toggleAllBtn.getAttribute('aria-pressed') === 'true';
+      setAllCards(!current);
     });
   }
 

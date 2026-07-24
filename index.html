@@ -18,9 +18,32 @@
           </div>
         </div>
         <div class="actions">
-          <button id="copyAll" class="copy">Copiar todo</button>
-          <button id="toggleAll" class="secondary">Ocultar todo</button>
-          <button id="whatsappAll" class="secondary">Compartir por WhatsApp</button>
+          <button id="copyAll" class="copy action-btn" data-label="Copiar todo" aria-label="Copiar todo">
+            <!-- clipboard icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M16 4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H8C6.89543 20 6 19.1046 6 18V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="8" y="2" width="8" height="4" rx="1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="btn-label">Copiar todo</span>
+          </button>
+
+          <button id="toggleAll" class="secondary action-btn" data-label="Ocultar todo" aria-pressed="true" aria-label="Ocultar todo">
+            <!-- eye / toggle icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="btn-label">Ocultar todo</span>
+          </button>
+
+          <button id="whatsappAll" class="secondary action-btn" data-label="Compartir por WhatsApp" aria-label="Compartir por WhatsApp">
+            <!-- whatsapp icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 15.5A10.94 10.94 0 0018.5 12 10.94 10.94 0 0012 3.5 10.94 10.94 0 005.5 12c0 1.86.5 3.6 1.37 5.08L4 21l3.05-1.01A10.94 10.94 0 0012 20.5c5.52 0 10-4.48 10-10 0-.34-.02-.68-.05-1.01z" stroke="currentColor" stroke-width="0" fill="#25D366"/>
+              <path d="M17.5 14.5c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.12.3-.32.45-.48.15-.16.2-.27.3-.45.1-.18.05-.34-.02-.48-.07-.14-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.51-.17-.01-.36-.01-.55-.01s-.48.07-.73.35c-.25.28-.95.93-.95 2.27s.97 2.64 1.1 2.82c.13.18 1.9 2.95 4.6 4.14 3.2 1.4 3.2 0 3.77-.99.43-.74.62-1.36.69-1.48.07-.12.25-.18.46-.03.2.15 1.26.59 1.48.69.22.1.37.15.42.24.05.1.05.76-.2 1.47-.24.71-1.03 1.62-1.85 1.54-.82-.08-2.07-.67-3.4-1.43z" fill="#fff"/>
+            </svg>
+            <span class="btn-label">Compartir por WhatsApp</span>
+          </button>
         </div>
       </div>
     </header>
