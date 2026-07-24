@@ -14,10 +14,10 @@
           <img src="logo/pink-simple.png" alt="logo" class="site-logo" />
           <div class="hero-text">
             <h1>DEPÓSITOS</h1>
-            <p>Elige el método que prefieras y comparte los datos para que tus clientes puedan transferir fácilmente.</p>
+            <p>Elige el método que prefieras y comparte tu comprobante</p>
           </div>
-        </div>
-        <div class="actions">
+
+          <div class="actions">
           <button id="copyAll" class="copy action-btn" data-label="Copiar todo" aria-label="Copiar todo">
             <!-- clipboard icon -->
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -44,12 +44,21 @@
             </svg>
             <span class="btn-label">Compartir por WhatsApp</span>
           </button>
+          </div>
         </div>
       </div>
     </header>
 
+    <!-- Tabs: names on top -->
+    <nav class="person-tabs" role="tablist">
+      <button class="tab active" data-target="person-geovanni">Geovanni Maldonado Murillo</button>
+      <button class="tab" data-target="person-azteca">Banco Azteca</button>
+      <button class="tab" data-target="person-isbet">Isbet Murillo</button>
+    </nav>
+    </header>
+
     <section class="cards">
-      <article class="card person-card">
+      <article id="person-geovanni" class="card person-card">
         <div class="person-header">Geovanni Maldonado Murillo</div>
         <div class="person-subtitle">Mercado Pago W</div>
         <div class="card-body open">
@@ -79,7 +88,7 @@
         </div>
       </article>
 
-      <article class="card person-card">
+      <article id="person-azteca" class="card person-card" style="display:none">
         <div class="person-header">Banco Azteca</div>
         <div class="person-subtitle">Geovanni Maldonado</div>
         <div class="card-body open">
@@ -109,7 +118,7 @@
         </div>
       </article>
 
-      <article class="card person-card">
+      <article id="person-isbet" class="card person-card" style="display:none">
         <div class="person-header">Isbet Murillo</div>
         <div class="person-subtitle">Spin by OXXO</div>
         <div class="card-body open">
@@ -142,7 +151,7 @@
 
       <article class="card note">
         <h3>Nota</h3>
-        <p>Los clientes pueden pulsar el botón <strong>Copiar</strong> para copiar el dato correspondiente al portapapeles. Si desea incluir códigos QR o archivos imprimibles, puedo añadirlos.</p>
+        <p>¡No olvides enviar el comprobante! Por favor revisa que el monto y la referencia sean correctos antes de finalizar la operación. Conserva este comprobante como respaldo y comparte la captura o el texto del comprobante con nosotros por WhatsApp para acelerar la confirmación de tu pago.</p>
       </article>
     </section>
 

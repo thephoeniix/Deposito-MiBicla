@@ -114,6 +114,33 @@ document.addEventListener('DOMContentLoaded',()=>{
     });
   }
 
+  // Tabs: show selected person card
+  document.querySelectorAll('.person-tabs .tab').forEach(tab=>{
+    tab.addEventListener('click', ()=>{
+      const target = tab.getAttribute('data-target');
+      document.querySelectorAll('.person-tabs .tab').forEach(t=>t.classList.remove('active'));
+      tab.classList.add('active');
+      document.querySelectorAll('.card.person-card').forEach(card=>{
+        if(card.id === target) card.style.display = '';
+        else card.style.display = 'none';
+      });
+    });
+  });
+
+  // Make person header clickable to toggle details
+  document.querySelectorAll('.person-card .person-header').forEach(h=>{
+    h.style.cursor = 'pointer';
+    h.addEventListener('click', ()=>{
+      const card = h.closest('.person-card');
+      const body = card.querySelector('.card-body');
+      const open = !card.classList.contains('open');
+      setCardState(card, open);
+      if(body && open){
+        body.style.maxHeight = body.scrollHeight + 24 + 'px';
+      }
+    });
+  });
+
   function setCardState(card, open) {
     card.classList.toggle('open', open);
     const body = card.querySelector('.card-body');

@@ -14,7 +14,8 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#11
 .hero-left{display:flex;align-items:center;gap:12px}
 .site-logo{width:64px;height:auto}
 .hero-text h1{font-size:34px;letter-spacing:1px;margin:0;color:var(--accent)}
-.hero-text p{margin:6px 0 0;color:#e9dff0}
+.hero-text p{margin:6px 0 12px;color:#e9dff0}
+.hero-left .actions{margin-top:8px}
 .actions{display:flex;gap:12px;flex-wrap:nowrap;margin-bottom:0;align-items:center}
 .actions button{color:#fff}
 .actions .copy{background:var(--accent);color:#fff}
@@ -31,6 +32,17 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#11
   .action-btn .btn-label{display:none}
   .actions{gap:8px}
 }
+
+/* person tabs */
+.person-tabs{display:flex;gap:8px;margin:18px 0 12px}
+.person-tabs .tab{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:10px 14px;border-radius:10px;cursor:pointer}
+.person-tabs .tab.active{border-color:var(--accent);background:linear-gradient(90deg,rgba(255,47,139,0.06),rgba(255,47,139,0.02));font-weight:700}
+
+/* make whatsapp action green */
+#whatsappAll{background:#25D366;color:#fff}
+
+/* prevent selection on clickable elements */
+.person-header, .action-btn, .person-tabs .tab{user-select:none}
 
 .hero .actions{background:transparent;padding-top:0;padding-bottom:0;border-radius:0;margin-top:0}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
