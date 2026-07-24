@@ -9,16 +9,23 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#11
 .container{max-width:960px;margin:28px auto;padding:20px}
 .hero h1{margin:0;font-size:28px;color:#111}
 .hero p{color:var(--muted);margin:8px 0 20px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .card{background:var(--card);border-radius:10px;padding:16px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
 .card-header{display:flex;align-items:center;justify-content:space-between;width:100%;background:transparent;border:0;padding:0;cursor:pointer}
+.secondary{background:#f2f4f7;color:#111;border:0;padding:8px 12px;border-radius:8px;cursor:pointer}
 .card .small{font-size:12px;color:var(--muted)}
 .card .title{font-weight:700;margin-top:4px}
 .chev{font-size:20px;color:var(--accent);transition:transform .18s ease}
 .card.open .chev{transform:rotate(90deg)}
 .card-body{margin-top:12px;overflow:hidden;max-height:0;transition:max-height .28s ease;padding:0}
 .card.open .card-body{max-height:400px;padding-top:8px}
-.row{display:flex;align-items:center;gap:12px}
+.person-card{background:linear-gradient(135deg,#fff 0%,#fff7fb 100%)}
+.person-header{font-size:20px;font-weight:700;color:#111;margin-bottom:4px}
+.person-subtitle{font-size:14px;color:var(--accent);font-weight:600;margin-bottom:10px}
+.label{min-width:58px;font-weight:700;color:#444}
+.row{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.row:last-child{margin-bottom:0}
 .value{flex:1;padding:10px 12px;background:#fff;border-radius:6px;border:1px solid #eee;font-weight:600}
 .copy{background:var(--accent);color:#fff;border:0;padding:8px 12px;border-radius:8px;cursor:pointer}
 .copy.copied{background:#00a86b}
