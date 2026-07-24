@@ -36,8 +36,8 @@ body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#11
 
 /* person tabs */
 .person-tabs{display:flex;gap:8px;margin:18px 0 12px}
-.person-tabs{display:flex;gap:8px;margin:18px 0 12px;flex-wrap:wrap}
-.person-tabs .tab{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:10px 14px;border-radius:10px;cursor:pointer;white-space:normal}
+.person-tabs{display:flex;gap:8px;margin:18px 0 12px;flex-wrap:wrap;justify-content:center;width:100%}
+.person-tabs .tab{background:transparent;border:1px solid rgba(0,0,0,0.06);padding:10px 14px;border-radius:10px;cursor:pointer;white-space:normal;margin:0}
 .person-tabs .tab.active{border-color:var(--accent);background:linear-gradient(90deg,rgba(255,47,139,0.06),rgba(255,47,139,0.02));font-weight:700}
 
 /* make whatsapp action green */
