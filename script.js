@@ -67,6 +67,52 @@ document.addEventListener('DOMContentLoaded',()=>{
     });
   }
 
+  // Enviar por WhatsApp (por tarjeta/persona)
+  const whatsappNumber = '5214427496410'; // +52 1 442 749 6410 -> wa.me requires country+number without symbols
+  document.querySelectorAll('.card.person-card .whatsapp').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const card = btn.closest('.card.person-card');
+      if(!card) return;
+      const title = card.querySelector('.person-header')?.textContent?.trim() || '';
+      const subtitle = card.querySelector('.person-subtitle')?.textContent?.trim() || '';
+      const lines = [];
+      if(title) lines.push(title);
+      if(subtitle) lines.push(subtitle);
+      card.querySelectorAll('.row').forEach(row=>{
+        const label = row.querySelector('.label')?.textContent?.trim() || '';
+        const value = row.querySelector('.value')?.getAttribute('data-copy') || row.querySelector('.value')?.textContent || '';
+        if(label && value) lines.push(`${label}: ${value}`);
+      });
+      const text = lines.join('\n');
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    });
+  });
+
+  // Compartir todo por WhatsApp
+  const whatsappAllBtn = document.getElementById('whatsappAll');
+  if(whatsappAllBtn){
+    whatsappAllBtn.addEventListener('click', ()=>{
+      const cards = Array.from(document.querySelectorAll('.card.person-card'));
+      const lines = [];
+      cards.forEach(card=>{
+        const title = card.querySelector('.person-header')?.textContent?.trim() || '';
+        const subtitle = card.querySelector('.person-subtitle')?.textContent?.trim() || '';
+        if(title) lines.push(title);
+        if(subtitle) lines.push(subtitle);
+        card.querySelectorAll('.row').forEach(row=>{
+          const label = row.querySelector('.label')?.textContent?.trim() || '';
+          const value = row.querySelector('.value')?.getAttribute('data-copy') || row.querySelector('.value')?.textContent || '';
+          if(label && value) lines.push(`- ${label}: ${value}`);
+        });
+        lines.push('');
+      });
+      const text = lines.join('\n').trim();
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    });
+  }
+
   function setCardState(card, open) {
     card.classList.toggle('open', open);
     const body = card.querySelector('.card-body');

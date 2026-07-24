@@ -15,3 +15,9 @@ Puedo añadir QR, exportar a PDF imprimible o desplegarla en Netlify/GitHub Page
 Funcionalidad añadida:
 
 - Botón `Copiar todo`: copia todos los datos mostrados (títulos, valores y notas) en un solo bloque para pegar o compartir.
+ - Botones `Enviar comprobante por WhatsApp`: comparten los datos de una persona o de todas las opciones a un número preconfigurado.
+
+Cómo funciona WhatsApp:
+
+Al pulsar `Enviar comprobante por WhatsApp` se abrirá WhatsApp Web o la app móvil (según el dispositivo) con un mensaje prellenado listo para enviar al número configurado en el script.
+
