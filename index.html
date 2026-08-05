@@ -1,165 +1,241 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Datos de depósito - Compartir</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070709">
+  <meta name="description" content="Mi Bicla, taller y accesorios de ciclismo en La Cañada, Querétaro.">
+  <title>Mi Bicla | Taller y accesorios de ciclismo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="container">
-    <header class="hero">
-      <div class="hero-inner">
-        <div class="hero-left">
-          <img src="logo/pink-simple.png" alt="logo" class="site-logo" />
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92Z"/></symbol>
+    <symbol id="icon-message" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.4 9.4 0 0 1-4.1-1L3 21l1.7-4.6A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8.3 8.2c.5 3.1 2.4 5 5.5 5.5l1.2-1.2 2 .8c-.1 1.4-1.1 2.3-2.5 2.3A8.2 8.2 0 0 1 6.4 7.5C6.4 6.1 7.3 5.1 8.7 5l.8 2-1.2 1.2Z"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="icon-user-plus" viewBox="0 0 24 24"><path d="M15 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+    <symbol id="icon-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h2"/></symbol>
+    <symbol id="icon-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="12" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4M12 15v2"/></symbol>
+    <symbol id="icon-facebook" viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v6h4v-6h3l1-4h-4V9c0-.6.4-1 1-1Z"/></symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" class="fill-icon"/></symbol>
+    <symbol id="icon-tools" viewBox="0 0 24 24"><path d="m14.7 6.3 3-3a5 5 0 0 1-6.4 6.4L5.5 15.5a2.1 2.1 0 0 1-3-3l5.8-5.8a5 5 0 0 1 6.4-6.4l-3 3 3 3Z"/><path d="m13 12 8 8M18 17l-2 2"/></symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  </svg>
+
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Mi Bicla, inicio">
+      <img src="logo_mibicla/letterslogoblaco.png" alt="Mi Bicla">
+    </a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#depositos">Depósitos</a>
+    </nav>
+    <a class="topbar-cta" href="https://wa.me/524428306394?text=Hola%20Mi%20Bicla%2C%20quisiera%20informaci%C3%B3n." target="_blank" rel="noopener">
+      <svg><use href="#icon-message"></use></svg>
+      <span>Escríbenos</span>
+    </a>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-photo" role="img" aria-label="Ciclista del equipo Mi Bicla en una ruta de montaña"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <span class="eyebrow">Taller · accesorios · comunidad</span>
+        <h1>Tu bicicleta.<br><em>Tu aventura.</em></h1>
+        <p>Servicio, accesorios y pasión por el ciclismo en el corazón de La Cañada.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://wa.me/524428306394?text=Hola%20Mi%20Bicla%2C%20quisiera%20informaci%C3%B3n." target="_blank" rel="noopener">
+            <svg><use href="#icon-message"></use></svg>Hablar por WhatsApp
+          </a>
+          <a class="button button-ghost" href="tel:+524428306394">
+            <svg><use href="#icon-phone"></use></svg>Llamar ahora
+          </a>
         </div>
-        <div class="hero-content">
-          <div class="hero-text">
-            <h1>DEPÓSITOS</h1>
-            <p>Elige el método que prefieras y comparte tu comprobante</p>
+      </div>
+      <a class="scroll-cue" href="#contacto"><span>Conócenos</span><b>↓</b></a>
+    </section>
+
+    <section id="contacto" class="section contact-section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Estamos para rodar contigo</span>
+          <h2>Mi Bicla <em>siempre cerca.</em></h2>
+        </div>
+        <p>Guarda nuestros datos o contáctanos por el medio que prefieras. Te ayudamos con tu bicicleta, accesorios y servicio.</p>
+      </div>
+
+      <div class="contact-layout">
+        <article class="contact-card">
+          <div class="contact-brand">
+            <img src="logo_mibicla/pink-simple.png" alt="">
+            <div><strong>Mi Bicla</strong><span>Taller y accesorios de ciclismo</span></div>
           </div>
-
-          <div class="actions">
-          <button id="copyAll" class="copy action-btn" data-label="Copiar todo" aria-label="Copiar todo">
-            <!-- clipboard icon -->
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M16 4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H8C6.89543 20 6 19.1046 6 18V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <rect x="8" y="2" width="8" height="4" rx="1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="btn-label">Copiar todo</span>
+          <div class="contact-list">
+            <a href="https://wa.me/524428306394?text=Hola%20Mi%20Bicla%2C%20quisiera%20informaci%C3%B3n." target="_blank" rel="noopener">
+              <span class="contact-icon"><svg><use href="#icon-message"></use></svg></span>
+              <span><small>WhatsApp principal</small><strong>+52 442 830 6394</strong></span>
+              <b>↗</b>
+            </a>
+            <a href="https://wa.me/524427496410?text=Hola%20Mi%20Bicla%2C%20quisiera%20informaci%C3%B3n." target="_blank" rel="noopener">
+              <span class="contact-icon"><svg><use href="#icon-message"></use></svg></span>
+              <span><small>WhatsApp alterno</small><strong>+52 442 749 6410</strong></span>
+              <b>↗</b>
+            </a>
+            <a href="mailto:mibiclaqro@gmail.com">
+              <span class="contact-icon"><svg><use href="#icon-mail"></use></svg></span>
+              <span><small>Correo electrónico</small><strong>mibiclaqro@gmail.com</strong></span>
+              <b>↗</b>
+            </a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Calle+Emiliano+Zapata+Ote.+9%2C+El+Cerrito%2C+La+Ca%C3%B1ada%2C+Qro.+76240" target="_blank" rel="noopener">
+              <span class="contact-icon"><svg><use href="#icon-pin"></use></svg></span>
+              <span><small>Visítanos</small><strong>Emiliano Zapata Ote. 9, El Cerrito, La Cañada, Qro.</strong></span>
+              <b>↗</b>
+            </a>
+          </div>
+          <button class="button button-primary save-contact" id="saveContact" type="button">
+            <svg><use href="#icon-user-plus"></use></svg>Guardar contacto
           </button>
+        </article>
 
-          <button id="toggleAll" class="secondary action-btn" data-label="Ocultar todo" aria-pressed="true" aria-label="Ocultar todo">
-            <!-- eye / toggle icon -->
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="btn-label">Ocultar todo</span>
-          </button>
-
-          <button id="whatsappAll" class="secondary action-btn" data-label="Compartir por WhatsApp" aria-label="Compartir por WhatsApp">
-            <!-- whatsapp icon -->
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M21 15.5A10.94 10.94 0 0018.5 12 10.94 10.94 0 0012 3.5 10.94 10.94 0 005.5 12c0 1.86.5 3.6 1.37 5.08L4 21l3.05-1.01A10.94 10.94 0 0012 20.5c5.52 0 10-4.48 10-10 0-.34-.02-.68-.05-1.01z" stroke="currentColor" stroke-width="0" fill="#25D366"/>
-              <path d="M17.5 14.5c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.12.3-.32.45-.48.15-.16.2-.27.3-.45.1-.18.05-.34-.02-.48-.07-.14-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.51-.17-.01-.36-.01-.55-.01s-.48.07-.73.35c-.25.28-.95.93-.95 2.27s.97 2.64 1.1 2.82c.13.18 1.9 2.95 4.6 4.14 3.2 1.4 3.2 0 3.77-.99.43-.74.62-1.36.69-1.48.07-.12.25-.18.46-.03.2.15 1.26.59 1.48.69.22.1.37.15.42.24.05.1.05.76-.2 1.47-.24.71-1.03 1.62-1.85 1.54-.82-.08-2.07-.67-3.4-1.43z" fill="#fff"/>
-            </svg>
-            <span class="btn-label">Compartir por WhatsApp</span>
-          </button>
+        <div class="contact-visual">
+          <img src="recursos/1234.jpeg" alt="Ciclista Mi Bicla recorriendo una ruta de montaña" loading="lazy">
+          <div class="visual-tag"><span>Pasión que</span><strong>te mueve.</strong></div>
+          <div class="social-card">
+            <span>Síguenos en ruta</span>
+            <div>
+              <a href="https://www.facebook.com/MiBiclaQueretaro" target="_blank" rel="noopener" aria-label="Mi Bicla Querétaro en Facebook"><svg><use href="#icon-facebook"></use></svg></a>
+              <a href="https://www.instagram.com/mibiclaqro" target="_blank" rel="noopener" aria-label="Mi Bicla en Instagram"><svg><use href="#icon-instagram"></use></svg></a>
+            </div>
+            <strong>@mibiclaqro</strong>
           </div>
         </div>
       </div>
-    </header>
-
-    <!-- Tabs: names on top (Spin by OXXO first) -->
-    <nav class="person-tabs" role="tablist">
-      <button class="tab active" data-target="person-isbet">Spin by OXXO</button>
-      <button class="tab" data-target="person-geovanni">Mercado Pago</button>
-      <button class="tab" data-target="person-azteca">Banco Azteca</button>
-    </nav>
-
-    <section class="cards">
-      <article id="person-geovanni" class="card person-card" style="display:none">
-        <div class="person-header">Geovanni Maldonado Murillo</div>
-        <div class="person-subtitle">Mercado Pago</div>
-        <div class="card-body open">
-          <div class="row">
-            <div class="label">CLABE</div>
-            <div class="value" data-copy="722969013121984110">722969013121984110</div>
-            <button class="copy" aria-label="Copiar">
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M16 4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H8C6.89543 20 6 19.1046 6 18V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <rect x="8" y="2" width="8" height="4" rx="1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-          </div>
-          <div class="row">
-            <div class="label">Tarjeta</div>
-            <div class="value" data-copy="5428780696135086">5428 7806 9613 5086</div>
-            <button class="copy" aria-label="Copiar">
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M16 4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H8C6.89543 20 6 19.1046 6 18V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <rect x="8" y="2" width="8" height="4" rx="1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-          </div>
-          <div class="share-row">
-            <button class="whatsapp">Enviar comprobante por WhatsApp</button>
-          </div>
-        </div>
-      </article>
-
-      <article id="person-azteca" class="card person-card" style="display:none">
-        <div class="person-header">Banco Azteca</div>
-        <div class="person-subtitle">Geovanni Maldonado</div>
-        <div class="card-body open">
-          <div class="row">
-            <div class="label">CLABE</div>
-            <div class="value" data-copy="127680013766057072">1276 8001 3766 057072</div>
-            <button class="copy" aria-label="Copiar">
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M16 4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H8C6.89543 20 6 19.1046 6 18V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <rect x="8" y="2" width="8" height="4" rx="1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-          </div>
-          <div class="row">
-            <div class="label">Tarjeta</div>
-            <div class="value" data-copy="4027660059486458">4027 6600 5948 6458</div>
-            <button class="copy" aria-label="Copiar">
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M16 4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H8C6.89543 20 6 19.1046 6 18V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <rect x="8" y="2" width="8" height="4" rx="1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-          </div>
-          <div class="share-row">
-            <button class="whatsapp">Enviar comprobante por WhatsApp</button>
-          </div>
-        </div>
-      </article>
-
-      <article id="person-isbet" class="card person-card">
-        <div class="person-header">Isbet Murillo</div>
-        <div class="person-subtitle">Spin by OXXO</div>
-        <div class="card-body open">
-          <div class="meta">Titular: Isbet Murillo · Institución: Spin by OXXO</div>
-          <div class="row">
-            <div class="label">Número de tarjeta</div>
-            <div class="value" data-copy="4217470283956502">4217 4702 8395 6502</div>
-            <button class="copy" aria-label="Copiar">
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M16 4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H8C6.89543 20 6 19.1046 6 18V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <rect x="8" y="2" width="8" height="4" rx="1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-          </div>
-          <div class="row">
-            <div class="label">CLABE</div>
-            <div class="value" data-copy="728969000174741647">728969000174741647</div>
-            <button class="copy" aria-label="Copiar">
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M16 4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H8C6.89543 20 6 19.1046 6 18V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <rect x="8" y="2" width="8" height="4" rx="1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-          </div>
-          <div class="share-row">
-            <button class="whatsapp">Enviar comprobante por WhatsApp</button>
-          </div>
-        </div>
-      </article>
-
-      <article class="card note">
-        <h3>Nota</h3>
-        <p>Copia la información dandole click en el botón rosa y ¡No olvides enviar el comprobante!</p>
-      </article>
     </section>
 
-    <footer class="footer">
-      <small>Hecho para compartir con tus clientes • Mantén estos datos seguros</small>
-    </footer>
+    <section class="feature-strip" aria-label="Nuestros valores">
+      <div><svg><use href="#icon-tools"></use></svg><span><strong>Servicio experto</strong><small>Cuidamos cada detalle</small></span></div>
+      <div><svg><use href="#icon-shield"></use></svg><span><strong>Compra segura</strong><small>Datos verificados</small></span></div>
+      <div><svg><use href="#icon-message"></use></svg><span><strong>Atención directa</strong><small>Siempre cerca de ti</small></span></div>
+    </section>
+
+    <section id="depositos" class="section deposits-section">
+      <div class="section-heading deposits-heading">
+        <div>
+          <span class="eyebrow">Información de pago</span>
+          <h2>Realiza tu <em>depósito.</em></h2>
+        </div>
+        <p>Selecciona una cuenta, copia los datos y envíanos tu comprobante por WhatsApp.</p>
+      </div>
+
+      <div class="bank-tabs" role="tablist" aria-label="Selecciona un banco">
+        <button class="bank-tab active" type="button" role="tab" aria-selected="true" aria-controls="person-isbet" data-target="person-isbet">
+          <img src="logo_banks/logo.svg" alt="">Spin by OXXO
+        </button>
+        <button class="bank-tab" type="button" role="tab" aria-selected="false" aria-controls="person-geovanni" data-target="person-geovanni">
+          <img src="logo_banks/mercadopago.png" alt="">Mercado Pago
+        </button>
+        <button class="bank-tab" type="button" role="tab" aria-selected="false" aria-controls="person-azteca" data-target="person-azteca">
+          <img src="logo_banks/banco-azteca.png" alt="">Banco Azteca
+        </button>
+      </div>
+
+      <div class="deposit-layout">
+        <div class="account-panels">
+          <article id="person-isbet" class="account-card active" role="tabpanel">
+            <div class="account-header">
+              <span class="bank-logo"><img src="logo_banks/logo.svg" alt="Logo Spin by OXXO"></span>
+              <div><h3>Spin by OXXO</h3><p>Titular: Isbet Murillo</p></div>
+            </div>
+            <div class="account-row">
+              <svg><use href="#icon-card"></use></svg>
+              <span><small>Número de tarjeta</small><strong data-copy="4217470283956502">4217 4702 8395 6502</strong></span>
+              <button class="copy-button" type="button" aria-label="Copiar número de tarjeta"><svg><use href="#icon-copy"></use></svg></button>
+            </div>
+            <div class="account-row">
+              <svg><use href="#icon-lock"></use></svg>
+              <span><small>CLABE</small><strong data-copy="728969000174741647">728969000174741647</strong></span>
+              <button class="copy-button" type="button" aria-label="Copiar CLABE"><svg><use href="#icon-copy"></use></svg></button>
+            </div>
+            <button class="whatsapp-payment" type="button"><svg><use href="#icon-message"></use></svg>Enviar comprobante por WhatsApp</button>
+          </article>
+
+          <article id="person-geovanni" class="account-card" role="tabpanel" hidden>
+            <div class="account-header">
+              <span class="bank-logo"><img src="logo_banks/mercadopago.png" alt="Logo Mercado Pago"></span>
+              <div><h3>Mercado Pago</h3><p>Titular: Geovanni Maldonado Murillo</p></div>
+            </div>
+            <div class="account-row">
+              <svg><use href="#icon-lock"></use></svg>
+              <span><small>CLABE</small><strong data-copy="722969013121984110">722969013121984110</strong></span>
+              <button class="copy-button" type="button" aria-label="Copiar CLABE"><svg><use href="#icon-copy"></use></svg></button>
+            </div>
+            <div class="account-row">
+              <svg><use href="#icon-card"></use></svg>
+              <span><small>Número de tarjeta</small><strong data-copy="5428780696135086">5428 7806 9613 5086</strong></span>
+              <button class="copy-button" type="button" aria-label="Copiar número de tarjeta"><svg><use href="#icon-copy"></use></svg></button>
+            </div>
+            <button class="whatsapp-payment" type="button"><svg><use href="#icon-message"></use></svg>Enviar comprobante por WhatsApp</button>
+          </article>
+
+          <article id="person-azteca" class="account-card" role="tabpanel" hidden>
+            <div class="account-header">
+              <span class="bank-logo"><img src="logo_banks/banco-azteca.png" alt="Logo Banco Azteca"></span>
+              <div><h3>Banco Azteca</h3><p>Titular: Geovanni Maldonado</p></div>
+            </div>
+            <div class="account-row">
+              <svg><use href="#icon-lock"></use></svg>
+              <span><small>CLABE</small><strong data-copy="127680013766057072">1276 8001 3766 057072</strong></span>
+              <button class="copy-button" type="button" aria-label="Copiar CLABE"><svg><use href="#icon-copy"></use></svg></button>
+            </div>
+            <div class="account-row">
+              <svg><use href="#icon-card"></use></svg>
+              <span><small>Número de tarjeta</small><strong data-copy="4027660059486458">4027 6600 5948 6458</strong></span>
+              <button class="copy-button" type="button" aria-label="Copiar número de tarjeta"><svg><use href="#icon-copy"></use></svg></button>
+            </div>
+            <button class="whatsapp-payment" type="button"><svg><use href="#icon-message"></use></svg>Enviar comprobante por WhatsApp</button>
+          </article>
+        </div>
+
+        <aside class="payment-note">
+          <span class="note-icon"><svg><use href="#icon-shield"></use></svg></span>
+          <span class="eyebrow">Pago seguro</span>
+          <h3>Tu comprobante nos ayuda a confirmar el pago.</h3>
+          <p>Copia los datos de la cuenta seleccionada y envíanos una foto del comprobante. Solo lo usaremos para validar tu operación.</p>
+          <div><span>1</span>Copia los datos</div>
+          <div><span>2</span>Realiza tu depósito</div>
+          <div><span>3</span>Envíanos el comprobante</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="community-banner">
+      <img src="recursos/ASN03043.jpg.jpeg" alt="Equipo Mi Bicla en competencia de ciclismo de montaña" loading="lazy">
+      <div>
+        <span class="eyebrow">Mi Bicla community</span>
+        <h2>Más que bicicletas,<br>una <em>comunidad.</em></h2>
+        <p>Nos mueve compartir kilómetros, experiencias y la pasión por descubrir nuevos caminos.</p>
+        <a href="https://www.instagram.com/mibiclaqro" target="_blank" rel="noopener">Ver nuestras rodadas <span>↗</span></a>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <a class="brand" href="#inicio"><img src="logo_mibicla/letterslogoblaco.png" alt="Mi Bicla"></a>
+    <p>Taller y accesorios de ciclismo · La Cañada, Querétaro</p>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/MiBiclaQueretaro" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#icon-facebook"></use></svg></a>
+      <a href="https://www.instagram.com/mibiclaqro" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#icon-instagram"></use></svg></a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Dato copiado</div>
   <script src="script.js"></script>
 </body>
 </html>
