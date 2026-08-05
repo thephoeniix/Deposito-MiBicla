@@ -90,7 +90,13 @@ h1 em, h2 em { color: var(--pink); font-style: normal; }
 .contact-brand div { display: flex; flex-direction: column; }
 .contact-brand strong { font-family: "Barlow Condensed", sans-serif; font-size: 2rem; line-height: 1; text-transform: uppercase; }
 .contact-brand span { margin-top: 5px; color: var(--muted); font-size: .76rem; }
-.contact-list { margin: 18px 0 24px; }
+.social-links { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--line); }
+.social-links > span { display: flex; flex-direction: column; color: #797983; font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; }
+.social-links > span strong { margin-top: 2px; color: var(--white); font-size: .78rem; letter-spacing: 0; text-transform: none; }
+.social-links > div { display: flex; gap: 8px; }
+.social-links a, .footer-socials a { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid rgba(255, 255, 255, .25); border-radius: 12px; color: var(--pink-light); transition: .2s ease; }
+.social-links a:hover, .footer-socials a:hover { border-color: var(--pink); background: var(--pink); color: white; }
+.contact-list { margin: 0 0 24px; }
 .contact-list a { display: grid; grid-template-columns: 42px 1fr auto; gap: 15px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); }
 .contact-list a:hover .contact-icon { background: var(--pink); color: white; }
 .contact-list a:hover > b { color: var(--pink); transform: translate(2px, -2px); }
@@ -106,13 +112,6 @@ h1 em, h2 em { color: var(--pink); font-style: normal; }
 .contact-visual:hover > img { transform: scale(1.025); }
 .visual-tag { position: absolute; z-index: 1; left: 38px; bottom: 34px; display: flex; flex-direction: column; font-family: "Barlow Condensed", sans-serif; font-size: 2.2rem; font-weight: 800; line-height: 1; text-transform: uppercase; }
 .visual-tag strong { color: var(--pink-light); }
-.social-card { position: absolute; z-index: 2; top: 24px; right: 24px; width: 160px; padding: 0; background: transparent; border: 0; filter: drop-shadow(0 2px 8px rgba(0, 0, 0, .9)); }
-.social-card > span { color: rgba(255, 255, 255, .75); font-size: .65rem; text-transform: uppercase; letter-spacing: .1em; }
-.social-card > div { display: flex; gap: 8px; margin: 12px 0; }
-.social-card a, .footer-socials a { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid rgba(255, 255, 255, .35); border-radius: 12px; color: var(--pink-light); transition: .2s ease; }
-.social-card a:hover, .footer-socials a:hover { border-color: var(--pink); background: var(--pink); color: white; }
-.social-card strong { font-size: .8rem; }
-
 .deposits-section { padding-top: 24px; }
 .deposits-heading { margin-bottom: 38px; }
 .bank-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 16px; }
@@ -180,7 +179,7 @@ h1 em, h2 em { color: var(--pink); font-style: normal; }
   .brand { width: 132px; height: 46px; }
   .topbar-cta { width: 42px; height: 42px; justify-content: center; padding: 0; border-radius: 50%; }
   .topbar-cta span { display: none; }
-  .hero { min-height: 610px; height: 86svh; max-height: 720px; align-items: flex-end; padding-bottom: 62px; }
+  .hero { min-height: 0; height: auto; max-height: none; align-items: flex-end; padding: 128px 0 24px; }
   .hero-photo { background-position: 63% center; }
   .hero-shade { background: linear-gradient(90deg, rgba(4, 4, 6, .65), rgba(4, 4, 6, .2)), linear-gradient(0deg, var(--black) 3%, rgba(4, 4, 6, .75) 38%, transparent 75%); }
   .hero-content, .section, .community-banner, .footer { width: calc(100% - 28px); }
@@ -191,13 +190,12 @@ h1 em, h2 em { color: var(--pink); font-style: normal; }
   .button { min-height: 48px; padding: 11px 12px; font-size: .72rem; }
   .scroll-cue { display: none; }
   .section { padding: 48px 0; }
-  .contact-section { padding-bottom: 18px; }
+  .contact-section { padding-top: 0; padding-bottom: 18px; }
   .section-heading { margin-bottom: 25px; }
   .section-heading h2, .community-banner h2 { font-size: 3.35rem; }
   .section-heading p { font-size: .82rem; }
   .contact-layout { min-height: 0; }
   .contact-visual { min-height: 350px; }
-  .social-card { top: 16px; right: 16px; width: 145px; }
   .visual-tag { left: 22px; bottom: 22px; }
   .contact-card { padding: 26px 20px; }
   .contact-list a { grid-template-columns: 40px 1fr auto; gap: 11px; }
