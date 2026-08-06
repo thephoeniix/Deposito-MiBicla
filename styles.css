@@ -191,7 +191,7 @@ h1 em, h2 em { color: var(--pink); font-style: normal; }
   .hero-shade { background: linear-gradient(90deg, rgba(4, 4, 6, .65), rgba(4, 4, 6, .2)), linear-gradient(0deg, var(--black) 3%, rgba(4, 4, 6, .75) 38%, transparent 75%); }
   .hero-content, .section, .community-banner, .footer, .creator-banner { width: calc(100% - 28px); }
   .hero-content { margin-top: 0; }
-  .hero h1 { font-size: clamp(3.7rem, 19vw, 5.3rem); }
+  .hero h1 { font-size: clamp(3.7rem, 16vw, 5.3rem); }
   .hero-content > p { margin: 15px 0 20px; font-size: .84rem; }
   .hero-actions { display: grid; grid-template-columns: 1fr 1fr; }
   .button { min-height: 48px; padding: 11px 12px; font-size: .72rem; }
