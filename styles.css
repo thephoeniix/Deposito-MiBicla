@@ -199,7 +199,7 @@ h1 em, h2 em { color: var(--pink); font-style: normal; }
   .section { padding: 48px 0; }
   .contact-section { padding-top: 0; padding-bottom: 18px; }
   .section-heading { margin-bottom: 25px; }
-  .section-heading h2, .community-banner h2 { font-size: 3.35rem; }
+  .section-heading h2, .community-banner h2 { font-size: 2.35rem; }
   .section-heading p { font-size: .82rem; }
   .contact-layout { min-height: 0; }
   .contact-visual { min-height: 350px; }
