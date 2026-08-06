@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'TEL;TYPE=CELL:+524428306394',
       'TEL;TYPE=CELL:+524427496410',
       'EMAIL:mibiclaqro@gmail.com',
-      'ADR;TYPE=WORK:;;Calle Emiliano Zapata Ote. 9;El Cerrito, La Cañada;Querétaro;76240;México',
+      'ADR;TYPE=WORK:;;Calle Emiliano Zapata Ote. 10;El Jardín, La Cañada;Querétaro;;México',
       'URL:https://www.instagram.com/mibiclaqro',
       'END:VCARD'
     ].join('\r\n');
