@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const whatsappNumber = '524428306394';
+  const whatsappNumber = '524427496410';
   const toast = document.getElementById('toast');
   let toastTimer;
 
